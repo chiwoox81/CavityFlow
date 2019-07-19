@@ -10,10 +10,14 @@ ENV CONDA_DIR=/opt/conda \
     
 # Install Jupyter Notebook and Hub
 RUN conda install --quiet --yes \
-    'numpy=1.13.*' \
-    'scipy=0.19.*' \
-    'sympy=1.1.*' \
-    'matplotlib=2.1.*' \
+#    'numpy=1.13.*' \
+    'numpy=*' \
+#    'scipy=0.19.*' \
+    'scipy=*' \    
+#    'sympy=1.1.*' \
+    'sympy=*' \    
+#    'matplotlib=2.1.*' \
+    'matplotlib=*' \    
     && conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 
